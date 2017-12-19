@@ -11,9 +11,17 @@ We are using the AQUASTAT data for the implementation, the global water informat
 * To visualize the impact (causal relationship) of water shortage on the agriculture productivity and food security. 
 
 ## Implemented tools 
-* World data map
-![alt text](images/background.jpg "Page 1")
+* World data map </br>
+
+<img src="images/datamap.jpg" height="350" width="500" >
+
 * Indexed line chart
+
+<img src="images/indexed.jpg" height="300" width="500" >
+
 * Parallel coordinate plot
+
+<img src="images/para.jpg" height="300" width="500" >
+
 ## Demo
 [![Demo](http://img.youtube.com/vi/FryAbozrXGo/0.jpg)](https://youtu.be/VhPRGqCxP7E)
