@@ -160,10 +160,15 @@
                </div>    
                <div class="row">
                    <div class="6u 12u$(mobile)">
-                       <div id="dm"><div id="fourthpart"> <div id="ins">To generate the world data map:<br> 1. Select variable name and year range from dropdownlist <br> 2. Click "Show" button </div> </div> </div>
+                       <div id="dm"><div id="fourthpart"> 
+                           <div id="ins">To generate the world data map:<br> 1. Select variable name and year range from dropdownlist <br> 2. Click "Show" button </div> 
+                           
+                           </div> </div>
                    </div>
                    <div class="6u 12u$(mobile)">
-                       <div id="iplot"><div id="ins">To generate the indexed line chart:<br> 1. Click the "Select" button and  select the countries on the datamap <br> 2. Click "Finish" button <br>Notice: need to refresh the page before generating a new plot</div> </div>
+                       <div id="iplot">
+                           <div id="ins">To generate the indexed line chart:<br> 1. Click the "Select" button and  select the countries on the datamap <br> 2. Click "Finish" button </div> 
+                       </div>
                    </div>
                    <div id="pplot"> </div>
                </div>
@@ -217,7 +222,12 @@
                 var height = 200;
                 var countries = [];
                 var curr_data = {};
+                function textDisappear(){
+                    infobox = document.getElementById("ins");
+                    infobox.style.display = "none";
+                }
                 function selectCountry(){
+                    countries = [];
                     document.addEventListener("click", function(){
                         var s = document.getElementById('hi');
                         if(s!=null){
@@ -230,6 +240,9 @@
                     });
                 }
                 function drawPlot(){ // changes
+                    textDisappear();
+                    document.getElementById('iplot').innerHTML = "";
+                    
                     console.log(countries);
                     var plot = {};
                     var time = ['1960','1970','1980','1990','2000','2010']
@@ -252,7 +265,7 @@
                     console.log(plot);
                     console.log(c);
                     indexPlot(plot, c);
-
+                    
                 }
 
                 function myFunction() {
@@ -358,7 +371,7 @@
                 .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            d3.csv("dataset/data.csv", function(error, data) {
+            d3.csv("https://raw.githubusercontent.com/XICHEN24/Water_Bank/master/dataset/data.csv", function(error, data) {
               // Extract the list of dimensions and create a scale for each.
               x.domain(dimensions = d3.keys(data[0]).filter(function(d) {
                 return d != "Nation" && (y[d] = d3.scale.linear()
