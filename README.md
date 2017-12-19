@@ -1,7 +1,7 @@
 # Water Bank
 This is a interative website offering visualization tools for the AQUASTAT global water information. </br>
-It was implemented based on the responsive site template designed by [https://html5up.net/prologue](HTML5 UP).
-
+It was implemented based on the responsive site template designed by [HTML5 UP](https://html5up.net/prologue).
+![alt text](images/background.jpg "Page 1")
 ## Data resource
 We are using the AQUASTAT data for the implementation, the global water information system by the UN Food and Agriculture Organization. Data is available at http://www.fao.org/nr/water/aquastat/main/index.stm
 
@@ -12,6 +12,7 @@ We are using the AQUASTAT data for the implementation, the global water informat
 
 ## Implemented tools 
 * World data map
+![alt text](images/background.jpg "Page 1")
 * Indexed line chart
 * Parallel coordinate plot
 ## Demo
