@@ -11,6 +11,10 @@ We are using the AQUASTAT data for the implementation, the global water informat
 * To visualize the historical changes of the water resources and uses to understand the origins and future of water scarcity in the world.
 * To visualize the impact (causal relationship) of water shortage on the agriculture productivity and food security. 
 
+## How to run this pipeline
+* Clone the repo
+* Open the index.html with Chrome. You may encounter some UI oddities using other web browsers and mobiles to open the file.
+
 ## Implemented tools 
 * World data map </br>
 

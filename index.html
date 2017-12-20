@@ -161,13 +161,13 @@
                <div class="row">
                    <div class="6u 12u$(mobile)">
                        <div id="dm"><div id="fourthpart"> 
-                           <div id="ins">To generate the world data map:<br> 1. Select variable name and year range from dropdownlist <br> 2. Click "Show" button </div> 
+                           <div id="ins">To generate the world data map:<br> 1. Select variable name and year range from two dropdown lists <br> 2. Click "Show" button </div> 
                            
                            </div> </div>
                    </div>
                    <div class="6u 12u$(mobile)">
                        <div id="iplot">
-                           <div id="ins">To generate the indexed line chart:<br> 1. Click the "Select" button and  select the countries on the datamap <br> 2. Click "Finish" button </div> 
+                           <div id="ins">To generate the indexed line chart:<br> 1. Click the "Select" button and  select the countries on the datamap <br> 2. Click "Finish" button <br> <b style="color:red">Notice: need to refresh page before generating a new plot</b> </div> 
                        </div>
                    </div>
                    <div id="pplot"> </div>
@@ -224,10 +224,13 @@
                 var curr_data = {};
                 function textDisappear(){
                     infobox = document.getElementById("ins");
-                    infobox.style.display = "none";
+                    if(infobox!=null){
+                        infobox.style.display = "none";    
+                    }
                 }
                 function selectCountry(){
-                    countries = [];
+                                      
+                    console.log('countris new:', countries);
                     document.addEventListener("click", function(){
                         var s = document.getElementById('hi');
                         if(s!=null){
@@ -242,7 +245,6 @@
                 function drawPlot(){ // changes
                     textDisappear();
                     document.getElementById('iplot').innerHTML = "";
-                    
                     console.log(countries);
                     var plot = {};
                     var time = ['1960','1970','1980','1990','2000','2010']
@@ -262,8 +264,6 @@
                         }
                         plot[c[i]] = v;
                     }
-                    console.log(plot);
-                    console.log(c);
                     indexPlot(plot, c);
                     
                 }
