@@ -12,8 +12,12 @@ We are using the AQUASTAT data for the implementation, the global water informat
 * To visualize the impact (causal relationship) of water shortage on the agriculture productivity and food security. 
 
 ## How to run this pipeline
-* Clone the repo
+* Fork and clone the repo
+```
+ git clone https://github.com/XICHEN24/Water_Bank.git
+```
 * Open the index.html with Chrome. You may encounter some UI oddities using other web browsers and mobiles to open the file.
+* Check whether the browser has access the the files under dataset
 
 ## Implemented tools 
 * World data map </br>
