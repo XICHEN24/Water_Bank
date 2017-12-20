@@ -17,7 +17,8 @@ We are using the AQUASTAT data for the implementation, the global water informat
  git clone https://github.com/XICHEN24/Water_Bank.git
 ```
 * Open the index.html with Chrome. You may encounter some UI oddities using other web browsers or mobiles to open the file.
-* Check whether the browser has access to the the files under dataset
+* Check whether the browser has access to the the files under dataset.
+* If the browser fails to display correctly, watch our the demo in the last section. 
 
 ## Implemented tools 
 * World data map </br>
